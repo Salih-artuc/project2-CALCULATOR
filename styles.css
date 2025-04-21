@@ -1,0 +1,49 @@
+body {
+	background-color: #f2f2f2;
+	font-family: Arial, sans-serif;
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+}
+
+.kalkulatör {
+	background-color: #333;
+	margin-top: 50px;
+	padding: 20px;
+	border-radius: 15px;		/* Köşeleri yumuşatma (oval) */
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);   /* Gölgelendirme efekti */
+	width: 270px;
+	height: 340px;
+}
+
+#ekran{
+	width: 100%;
+	height: 50px;
+	font-size: 25px;
+	text-align: right;
+	margin-bottom: 17px;
+	padding-right: 5px;
+	border: none;
+	border-radius: 5px;
+}
+
+.tuşlar{
+	display: grid;
+	grid-template-columns: repeat(4, 60px);  /* 4 sütun oluştur, her biri 60px */
+	grid-gap: 10px;			/* Butonlar arası boşluk */
+}
+
+button{
+	height: 60px;
+	font-size: 20px;
+	border: none;
+	border-radius: 10px;
+	background-color: #666;
+	color: white;
+	cursor: pointer;		/* Fare gelince el işareti çıkması */
+}
+
+/* Üzerine gelince (hover) buton rengi değişsin */
+button:hover {
+  background-color: #888;
+}
