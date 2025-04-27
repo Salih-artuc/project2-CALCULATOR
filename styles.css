@@ -1,49 +1,130 @@
 body {
+	display: flex;
 	background-color: #f2f2f2;
 	font-family: Arial, sans-serif;
-	display: flex;
 	justify-content: center;
+	align-items: center;
 	height: 100vh;
+	background: linear-gradient(135deg, #05051d, #343a40, #000000);
 }
 
-.kalkulatör {
-	background-color: #333;
-	margin-top: 50px;
-	padding: 20px;
-	border-radius: 15px;		/* Köşeleri yumuşatma (oval) */
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);   /* Gölgelendirme efekti */
-	width: 270px;
-	height: 340px;
+#calculator {
+	background-color: black;
+	margin-right: 0 !important;
+	padding: 6px;
+	padding-right: 12px;
+	padding-bottom: 0;
+	border-radius: 15px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	height: 350px;
+	padding-left: 6px !important;
+}
+
+#history-page{
+	display: none;
+	border-radius: 15px;
+	margin-left: 0 !important;
+	color: white;
+	padding: 10px;
+}
+
+.row{
+	background-color: #2a2a2a;
+	max-width: 75%;
+	border-radius: 17px;
+	border: dodgerblue solid 2px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+@media(max-width: 760px){
+	.row{
+		max-width: 100% !important;
+	}
 }
 
 #ekran{
-	width: 100%;
+	background-color:black;
+	color: white;
+	width: 90%;
 	height: 50px;
 	font-size: 25px;
 	text-align: right;
-	margin-bottom: 17px;
+	margin-bottom: 5px;
 	padding-right: 5px;
 	border: none;
-	border-radius: 5px;
+	border-radius: 9px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
 }
 
 .tuşlar{
 	display: grid;
-	grid-template-columns: repeat(4, 60px);  /* 4 sütun oluştur, her biri 60px */
-	grid-gap: 10px;			/* Butonlar arası boşluk */
+	grid-template-columns: repeat(4, 25%);
+	grid-gap: 2px;
 }
 
 button{
-	height: 60px;
+	height: 50px;
 	font-size: 20px;
 	border: none;
-	border-radius: 10px;
+	border-radius: 5px;
 	background-color: #666;
 	color: white;
-	cursor: pointer;		/* Fare gelince el işareti çıkması */
+	cursor: pointer;
 }
 
-/* Üzerine gelince (hover) buton rengi değişsin */
+.active-button {
+    background-color: purple;
+    color: white;
+}
+
+.active-button:hover {
+    background-color: rgb(108, 0, 108);
+    color: white;
+}
+
 button:hover {
   background-color: #888;
+}
+
+#operators, #clear{
+	background-color: #4a4a4a;
+}
+
+#operators:hover{
+	background-color: #777;
+}
+
+#clear:hover{
+	background-color: rgb(180, 0, 0);
+}
+
+#equvalent{
+	background-color: dodgerblue;
+}
+#equvalent:hover{
+	background-color: deepskyblue ;
+}
+
+.bi-clock-history, .bi-backspace-fill{
+	color: white;
+	text-align: right;
+	cursor: pointer;
+}
+.bi-clock-history:hover, .bi-backspace-fill:hover{
+	color: deepskyblue;
+}
+
+.bi-trash3-fill{
+	color: white;
+	font-size: 12px;
+	border: #666 solid 1px;
+	border-radius: 10rem;
+	float: right;
+	cursor: pointer;
+}
+
+.bi-trash3-fill:hover{
+	color: white;
+	background-color: red;
 }
